@@ -1,0 +1,121 @@
+
+body{
+    font-family: 'Indie Flower';
+font-family: 'Inter', sans-serif;
+font-family: 'Roboto Slab', serif;
+}
+.board{
+    display: grid;
+    gap: 1px;
+    grid-template-columns: repeat(3, 1fr);
+    position:absolute;
+    top:0px;
+    right:0px;
+    bottom:0px;
+    left:0px;
+}
+.board div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: greenyellow;
+
+}
+.X {
+    background: teal;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+}
+.X:after {
+    content: '';
+    height: 90px;
+    border-left: 2px solid #fff;
+    position: absolute;
+    transform: rotate(45deg);
+    left: 28px;
+}
+
+.X:before {
+    content: '';
+    height: 90px;
+    border-left: 2px solid #fff;
+    position: absolute;
+    transform: rotate(-45deg);
+    left: 28px;
+}
+.O{
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+}
+
+.popup{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+  
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.popupBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+button{
+    
+    display: inline-block;
+    outline: none;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1;
+    border-radius: 500px;
+    transition-property: background-color,border-color,color,box-shadow,filter;
+    transition-duration: .3s;
+    border: 1px solid transparent;
+    letter-spacing: 2px;
+    min-width: 160px;
+    text-transform: uppercase;
+    white-space: normal;
+    font-weight: 700;
+    text-align: center;
+    padding: 17px 48px;
+    color: #fff;
+    background-color: #1ED760;
+    height: 48px;
+    :hover{
+        transform: scale(1.04);
+        background-color: #21e065;
+    }
+
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.main form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 50px;
+}
+select{
+    width: 100%;
+    text-align: center;
+    color :black;
+    outline: none;
+    border-radius: 2rem;
+   
+}
